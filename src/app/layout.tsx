@@ -15,13 +15,13 @@ export default function RootLayout({
   return (
     <html lang='es'>
       <body>
-        <div className='grid lg:grid-cols-4 bg-slate-950 gap-8 text-white '>
-          <header className='lg:h-screen  bg-slate-900 shadow-sm shadow-slate-100'>
+        <div className='grid grid-cols-1 lg:grid-cols-4 gap-8 text-white h-screen container mr-auto'>
+          <header className='lg:h-screen  bg-[rgba(14,20,41,0.43)] shadow-2xl'>
             <Sidebar />
           </header>
-          <main className=' col-span-3 bg-slate-900 shadow-sm shadow-slate-100'>
+          <main className='lg:col-span-3 bg-[rgba(14,20,41,0.43)]'>
             <nav>
-              <Link href='/projects'>Proyectos </Link>
+              <Link href='/projects'>Proyectos</Link>
             </nav>
             {children}
           </main>
