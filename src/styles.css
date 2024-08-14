@@ -6,7 +6,42 @@
     font-style: normal;
 }
 
-.title {
-    font-family: "Space Grotesk", sans-serif;
-    font-weight: 100;
+
+/* ====================== */
+/* == SYSTEM DESEING == */
+
+:root {
+    /* COLORS */
+    --clr-dark: 0,0%,8%;
+    --clr-green: 155,71%,59%;
+    --clr-grey-dark: 0,0%,14%;
+    --clr-light-grey: 0,0%,85%;
+    --clr-white: 0,0%,100%;
+    --clr-tomato: 7,100%,68%;
+    /* FONT */
+    /* 
+        --ff: font-family
+        --fw: font-weight
+        --fs: font-size
+    */
+    --ff: "Space Grotesk", sans-serif;
+
+    --fw-bold: 700;
+    --fw-medium: 500;
+
+    /*  Font size base 16px -> 1rem */
+    --fs-xl: 5.5rem;
+    --fs-l: 3rem;
+    --fs-m: 1.5rem;
+    --fs-s: 1.125rem;
+
+}
+
+/* ====================== */
+
+
+body {
+    background-color: hsl(var(--clr-dark));
+    color: hsl(var(--clr-tomato));
+    font-size: var(--fs-xl);
 }
