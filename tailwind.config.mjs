@@ -23,6 +23,14 @@ export default {
 			M: '2rem',
 			S: '1.125rem'
 
+		},
+		container: {
+			center: true,
+			padding: {
+				DEFAULT: '1rem',
+				md: '1.875rem',
+				lg: '10.313rem'
+			}
 		}
 	},
 	plugins: [],
