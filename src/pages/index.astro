@@ -1,6 +1,31 @@
 ---
-
+import type {SocialLinks as DSocialLinks } from '../components/types'
 import '../app.css'
+import SocialLinks from '../components/SocialLinks.astro'
+import iconLinkedin from '../images/icon-linkedin.svg'
+import iconGithub from '../images/icon-github.svg'
+import iconFMentor from '../images/icon-frontend-mentor.svg'
+
+
+
+const data: DSocialLinks[] = [
+	{
+		icon: iconFMentor.src,
+		link: 'https://www.frontendmentor.io/profile/esyef',
+		title:'Frontend Mentor esyef profile'
+	},
+	{
+		icon: iconLinkedin.src,
+		link: 'https://www.linkedin.com/in/esyef/',
+		title:'Linkedin esyef profile'
+	},
+	{
+		icon: iconGithub.src,
+		link: 'https://github.com/esyef',
+		title:'Github esyef profile'
+	},
+
+]
 
 ---
 
@@ -8,19 +33,24 @@ import '../app.css'
 	<head>
 		<meta charset='utf-8' />
 		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-		<meta name='viewport' content='width=device-width' />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 		<meta name='generator' content={Astro.generator} />
 		<title>esyef - Desarrollador web</title>
 	</head>
 	<body class="bg-black container">
-		<header class="sticky top-0 flex">
+		<!-- Header -->
+		<header class="sticky top-0 flex max-sm:flex-col gap-5 pt-5 md:pt-7 lg:pt-11 justify-between">
 			<!-- Logo -->
-			<h1 class="text-white">
+			<h1 class="text-white text-center">
 				<a href="/" class="font-display text-M font-bold tracking-tight">
 					esyef
 				</a>
 			</h1>
-			<!-- Social Links -->
+			
+			<SocialLinks 
+				data={data}
+			/>
+			
 		</header>
 	</body>
 </html>
