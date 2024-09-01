@@ -1,0 +1,24 @@
+---
+
+import type {SocialLinks} from './types'
+
+interface Props {
+    data: SocialLinks[]
+}
+
+
+const { data } = Astro.props
+
+---
+
+<ul class="flex">
+   {
+    data.map(({icon,link,title}) => (
+        <li>
+            <a href={link} target="_blank">
+                <img src={icon} alt="title"/>
+            </a>
+        </li>
+    ))
+   }
+</ul>
