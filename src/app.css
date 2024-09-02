@@ -10,6 +10,65 @@
         font-weight: 400;
         font-style: normal;
     }
+
+}
+
+.wrapper {
+    max-width: 1110.49px;
+    width: 90%;
+    margin-inline: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.pattern-circle::before,
+.pattern-rings::before {
+    content: "";
+    position: absolute;
+    height: 129px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow-x: hidden;
+}
+
+.pattern-rings::before {
+    background-image: url('/src/images/pattern-rings.svg');
+}
+
+.pattern-circle::before {
+    background-image: url('/src/images/pattern-circle.svg');
+}
+
+.pattern-rings::before {
+    top: 8.5rem;
+    left: -24rem;
+    width: 530px;
+}
+
+.pattern-circle::before {
+    right: -5rem;
+    top: 16rem;
+    width: 129px;
+}
+
+@media screen and (min-width: 768px) {
+    .pattern-circle::before {
+        top: 29.3rem;
+        right: -5rem;
+    }
+
 }
 
 
+@media screen and (min-width: 1024px) {
+    .pattern-rings::before {
+        top: 8rem;
+        left: -20rem;
+    }
+
+    .pattern-circle::before {
+        top: 32rem;
+        right: 23rem;
+    }
+
+}

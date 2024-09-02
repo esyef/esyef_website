@@ -5,6 +5,7 @@ import SocialLinks from '../components/SocialLinks.astro'
 import iconLinkedin from '../images/icon-linkedin.svg'
 import iconGithub from '../images/icon-github.svg'
 import iconFMentor from '../images/icon-frontend-mentor.svg'
+import Profile from '../components/Profile/Profile.astro'
 
 
 
@@ -37,12 +38,13 @@ const data: DSocialLinks[] = [
 		<meta name='generator' content={Astro.generator} />
 		<title>esyef - Desarrollador web</title>
 	</head>
-	<body class="bg-black container">
+	<body class="bg-black wrapper relative font-display overflow-x-hidden">
 		<!-- Header -->
-		<header class="sticky top-0 flex max-sm:flex-col gap-5 pt-5 md:pt-7 lg:pt-11 justify-between">
+		<header class="flex flex-col md:flex-row gap-5 pt-5 md:pt-7 lg:pt-11 justify-between sticky z-50">
+			
 			<!-- Logo -->
 			<h1 class="text-white text-center">
-				<a href="/" class="font-display text-M font-bold tracking-tight">
+				<a href="/" class="text-M font-bold tracking-tight">
 					esyef
 				</a>
 			</h1>
@@ -50,7 +52,9 @@ const data: DSocialLinks[] = [
 			<SocialLinks 
 				data={data}
 			/>
-			
 		</header>
+
+		<!-- Profile section -->
+		<Profile />
 	</body>
 </html>

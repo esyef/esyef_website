@@ -34,10 +34,10 @@ const desktopImg = await getImage({
 })
 ---
 
-<picture class="inline-block max-sm:mx-auto md:order-2">
-    <source media="(max-width: 767px)" srcset={mobileImg.src} />
-    <source media="(max-width: 1023px)" srcset={tabletImg.src} />
-    <source media="(min-width: 1024px)" srcset={desktopImg.src} />
+<picture class="md:order-2 md:absolute md:top-0 md:-right-16 lg:-right-5 -z-10">
+    <source media="(max-width: 767px)" srcset={mobileImg.src} /> <!-- Para móvil -->
+    <source media="(min-width: 768px) and (max-width: 1023px)" srcset={tabletImg.src} /> <!-- Para tablet -->
+    <source media="(min-width: 1024px)" srcset={desktopImg.src} /> <!-- Para escritorio -->
     <img src={mobileImg.src} alt={alt} />
 </picture>
 
